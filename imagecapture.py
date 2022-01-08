@@ -46,3 +46,4 @@ cv2.destroyAllWindows()
 
 os.system('python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7')
 os.system('python train_model.py --embeddings output/embeddings.pickle --recognizer output/recognizer.pickle --label output/label.pickle')
+os.system("python recognize_video.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --label output/label.pickle")
